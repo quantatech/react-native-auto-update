@@ -27,11 +27,11 @@ public class UpdaterModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void check() {
-        UpdateManager.check(context);
+        UpdateManager.check(getCurrentActivity());
     }
 
     @ReactMethod
     public void checkManual() {
-        UpdateManager.checkManual(context);
+        UpdateManager.checkManual(getCurrentActivity());
     }
 }
