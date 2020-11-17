@@ -11,7 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.format.Formatter;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.widget.TextView;
 import android.text.method.ScrollingMovementMethod;
 import android.content.DialogInterface;
@@ -81,17 +81,13 @@ public class UpdaterModule extends ReactContextBaseJavaModule {
             final UpdateInfo info = agent.getInfo();
             String size = Formatter.formatShortFileSize(mContext, info.size);
 
-            String versionStr = isChinese()
-                    ? "最新版本：%1$s\n新版本大小：%2$s\n\n更新内容\n%3$s"
-                    : "New Version: %1$s\nSize: %2$s\n\nContent\n%3$s";
+            String versionStr = mContext.getString(R.string.auto_update_new_version);
 
             String content = String.format(versionStr, info.versionName, size, info.updateContent);
 
             final AlertDialog dialog = new AlertDialog.Builder(mContext).create();
 
-            String strTitle = isChinese()
-                    ? "应用更新"
-                    : "Version Update";
+            String strTitle = mContext.getString(R.string.auto_update_version_update);
 
             dialog.setTitle(strTitle);
             dialog.setCancelable(false);
@@ -111,32 +107,22 @@ public class UpdaterModule extends ReactContextBaseJavaModule {
             DialogInterface.OnClickListener listener = new MyPromptClickListener(agent, true);
 
             if (info.isForce) {
-                String strTips = isChinese()
-                        ? "您需要更新应用才能继续使用\n\n"
-                        : "You need to update your app to continue using\n\n";
+                String strTips = mContext.getString(R.string.auto_update_force_update);
                 tv.setText(strTips + content);
 
-                String strOk = isChinese()
-                        ? "确定"
-                        : "OK";
+                String strOk = mContext.getString(R.string.auto_update_ok);
                 dialog.setButton(DialogInterface.BUTTON_POSITIVE, strOk, listener);
             } else {
                 tv.setText(content);
 
-                String strImmediately = isChinese()
-                        ? "立即更新"
-                        : "Immediately";
+                String strImmediately = mContext.getString(R.string.auto_update_immediately);
                 dialog.setButton(DialogInterface.BUTTON_POSITIVE, strImmediately, listener);
 
-                String strLater = isChinese()
-                        ? "以后再说"
-                        : "Later";
+                String strLater = mContext.getString(R.string.auto_update_later);
                 dialog.setButton(DialogInterface.BUTTON_NEGATIVE, strLater, listener);
                 if (info.isIgnorable) {
 
-                    String strIgnore = isChinese()
-                            ? "忽略该版"
-                            : "Ignore";
+                    String strIgnore = mContext.getString(R.string.auto_update_ignore);
                     dialog.setButton(DialogInterface.BUTTON_NEUTRAL, strIgnore, listener);
                 }
             }
@@ -163,9 +149,7 @@ public class UpdaterModule extends ReactContextBaseJavaModule {
         public void onStart() {
             if (mContext instanceof Activity && !((Activity) mContext).isFinishing()) {
 
-                String strLoading = isChinese()
-                        ? "下载中..."
-                        : "Loading...";
+                String strLoading = mContext.getString(R.string.auto_update_loading);
 
                 ProgressDialog dialog = new ProgressDialog(mContext);
                 dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);

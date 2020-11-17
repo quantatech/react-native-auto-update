@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_update_new_version">最新版本：%1$s\n新版本大小：%2$s\n\n更新内容\n%3$s</string>
+	<string name="auto_update_version_update">应用更新</string>
+	<string name="auto_update_force_update">您需要更新应用才能继续使用\n\n</string>
+	<string name="auto_update_ok">确定</string>
+	<string name="auto_update_immediately">立即更新</string>
+	<string name="auto_update_later">以后再说</string>
+	<string name="auto_update_ignore">忽略该版</string>
+	<string name="auto_update_loading">下载中...</string>
+</resources>

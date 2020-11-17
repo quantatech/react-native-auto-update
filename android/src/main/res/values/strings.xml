@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auto_update_new_version">New Version: %1$s\nSize: %2$s\n\nContent\n%3$s</string>
+	<string name="auto_update_version_update">Version Update</string>
+	<string name="auto_update_force_update">You need to update your app to continue using\n\n</string>
+	<string name="auto_update_ok">OK</string>
+	<string name="auto_update_immediately">Immediately</string>
+	<string name="auto_update_later">Later</string>
+	<string name="auto_update_ignore">Ignore</string>
+	<string name="auto_update_loading">Loading...</string>
+</resources>
