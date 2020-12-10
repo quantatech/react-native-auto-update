@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="auto_update_new_version">New Version: %1$s\nSize: %2$s\n\nContent\n%3$s</string>
-	<string name="auto_update_version_update">Version Update</string>
-	<string name="auto_update_force_update">You need to update your app to continue using\n\n</string>
-	<string name="auto_update_ok">OK</string>
-	<string name="auto_update_immediately">Immediately</string>
-	<string name="auto_update_later">Later</string>
-	<string name="auto_update_ignore">Ignore</string>
-	<string name="auto_update_loading">Loading...</string>
+    <string name="auto_update_new_version">最新版本：%1$s\n新版本大小：%2$s\n\n更新內容\n%3$s</string>
+	<string name="auto_update_version_update">應用更新</string>
+	<string name="auto_update_force_update">您需要更新應用才能繼續使用\n\n</string>
+	<string name="auto_update_ok">確定</string>
+	<string name="auto_update_immediately">立即更新</string>
+	<string name="auto_update_later">以後再說</string>
+	<string name="auto_update_ignore">忽略該版</string>
+	<string name="auto_update_loading">下載中...</string>
 </resources>
